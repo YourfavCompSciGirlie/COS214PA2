@@ -24,7 +24,10 @@ class ShieldBearer : public Soldiers
         void rest();
 
     public:
-        Soldiers* clonis();
+
+        // Function for 4.2. Prototype (clone - making a copy of itself)
+        // Implementation made virtual (different from the UML)
+        virtual Soldiers* clonis();
 
 };
 

@@ -23,6 +23,10 @@ class Soldiers{
         
 
     public:
+
+        // Function for 4.2. Prototype (clone - making a copy of itself)
+        // Pure virtual because of Abstract class
+        // Will be implemented virtual in derived classes: Infantry, ShieldBearer, Boatman
         virtual Soldiers* clonis() = 0;
 
         //these two methods follow the template method because it is is used to 
