@@ -1,3 +1,5 @@
+// Class definition for 4.1. Factory Method
+
 #ifndef INFANTRYFACTORY_H
 #define INFANTRYFACTORY_H
 
@@ -9,11 +11,16 @@ using namespace std;
 
 class SoldierFactory;
 
-class InfantryFactory : public SoldierFactory{
+class InfantryFactory : public SoldierFactory {
+    
     public:
-        Soldiers createUnit();
-        int calculateTotalHealthPerUnit();
-        int calculateTotalDamagePerUnit();
-        int calculateTotalDefencePerUnit();
+        virtual Soldiers* createUnit();
+        virtual int calculateTotalHealthPerUnit();
+        virtual int calculateTotalDamagePerUnit();
+        virtual int calculateTotalDefencePerUnit();
+
+        // Added OWN functions
+        // InfantryFactory() {}
 };
-#endif
+
+#endif // INFANTRYFACTORY_H
