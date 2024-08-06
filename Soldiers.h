@@ -24,6 +24,13 @@ class Soldiers{
 
     public:
 
+        // Added helper functions for 4.1. Factory Method
+        // Used in the factory .cpp files to access attributes since the pointer is private
+        int getHealthPerSoldier() const;
+        int getDamagePerSoldier() const;
+        int getDefencePerSoldier() const;
+        int getAmountOfSoldiersPerUnit() const;
+
         // Function for 4.2. Prototype (clone - making a copy of itself)
         // Pure virtual because of Abstract class
         // Will be implemented virtual in derived classes: Infantry, ShieldBearer, Boatman

@@ -5,24 +5,21 @@
 #include "Boatman.h"
 
 Soldiers* BoatmanFactory::createUnit() {
-    // soldiers = new Boatman();
-    // return soldiers;
-
     return new Boatman();
 }
 
 int BoatmanFactory::calculateTotalHealthPerUnit() {
     Boatman boatman;
-    return boatman.amountOfSoldiersPerUnit * boatman.healthPerSoldier;
+    return boatman.getAmountOfSoldiersPerUnit() * boatman.getHealthPerSoldier();
 }
 
 int BoatmanFactory::calculateTotalDamagePerUnit() {
     Boatman boatman;
-    return boatman.amountOfSoldiersPerUnit * boatman.damagePerSoldier;
+    return boatman.getAmountOfSoldiersPerUnit() * boatman.getDamagePerSoldier();
 
 }
 
 int BoatmanFactory::calculateTotalDefencePerUnit() {
     Boatman boatman;
-    return boatman.amountOfSoldiersPerUnit * boatman.defencePerSoldier;
+    return boatman.getAmountOfSoldiersPerUnit() * boatman.getDefencePerSoldier();
 }
