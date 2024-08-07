@@ -8,34 +8,34 @@ void Infantry::prepare()
     //just get a basic skeleton down before we can conclude the best way to fully 
     //implement this as best as possible
 
-    cout<< getName() << " prepares for battle! " << endl;
-    int boosters = (getHealth() + getDefence()) / 10;
+    cout<< unitName << " prepares for battle! " << endl;
+    int boosters = (healthPerSoldier + defencePerSoldier) / 10;
     cout << "Booster : " << boosters<< " points to the Infantry" << endl;
 }
 void Infantry::execute()
 {
-    cout << getName() << "charges towards the enemy!!" << endl;
+    cout << unitName << "charges towards the enemy!!" << endl;
     cout << "The infantry charge at the enemy with spears raised high. " << endl;
-    int battleCounter = (getDamage() > getDefence()) ? 0:2;
+    int battleCounter = (damagePerSoldier > defencePerSoldier) ? 0:2;
     if(battleCounter == 0)
     {
-        cout << getName() << " wins the battle! Enemies are retreating..." << endl;
+        cout << unitName << " wins the battle! Enemies are retreating..." << endl;
     }
     else if(battleCounter == 1)
     {
         cout << "It's not looking good for any one of the sides... " << endl;
     }
     else{
-        cout << getName() << " is losing this one badly. " << endl;
+        cout << unitName << " is losing this one badly. " << endl;
     }
 }
 void Infantry::retreat()
 {
-    cout << getName() << " retreats to safer grounds. " << endl;
-    int safe = (getDefence() > getDamage()) ? 0:1;
-    if(safe == 0)
+    cout << unitName << " retreats to safer grounds. " << endl;
+    int safety = (defencePerSoldier > damagePerSoldier) ? 0:1;
+    if(safety == 0)
     {
-        cout << getName() << " has successfully retreated away from enemy forces. " << endl;
+        cout << unitName << " has successfully retreated away from enemy forces. " << endl;
 
     }
     else{
@@ -45,8 +45,8 @@ void Infantry::retreat()
 }
 void Infantry::rest()
 {
-    int recovBoost = (getHealth() + getAmountOfSoldiers())/10;
-    cout << getName() << " is resting, +" << recovBoost << " health to the infantry " << endl; 
+    int recovBoost = (healthPerSoldier + amountOfSoldierPerUnit)/10;
+    cout << unitName << " is resting, +" << recovBoost << " health to the infantry " << endl; 
 
 }
 
