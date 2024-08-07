@@ -5,24 +5,21 @@
 #include "Infantry.h"
 
 Soldiers* InfantryFactory::createUnit() {
-    // soldiers = new Infantry();
-    // return soldiers;
-
     return new Infantry();
 }
 
 int InfantryFactory::calculateTotalHealthPerUnit() {
     Infantry infantry;
-    return infantry.amountOfSoldiersPerUnit * infantry.healthPerSoldier;
+    return infantry.getAmountOfSoldiersPerUnit() * infantry.getHealthPerSoldier();
 }
 
 int InfantryFactory::calculateTotalDamagePerUnit() {
     Infantry infantry;
-    return infantry.amountOfSoldiersPerUnit * infantry.damagePerSoldier;
+    return infantry.getAmountOfSoldiersPerUnit() * infantry.getDamagePerSoldier();
 
 }
 
 int InfantryFactory::calculateTotalDefencePerUnit() {
     Infantry infantry;
-    return infantry.amountOfSoldiersPerUnit * infantry.defencePerSoldier;
+    return infantry.getAmountOfSoldiersPerUnit() * infantry.getDefencePerSoldier();
 }

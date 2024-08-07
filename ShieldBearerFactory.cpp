@@ -5,24 +5,21 @@
 #include "ShieldBearer.h"
 
 Soldiers* ShieldBearerFactory::createUnit() {
-    // soldiers = new ShieldBearer();
-    // return soldiers;
-
     return new ShieldBearer();
 }
 
 int ShieldBearerFactory::calculateTotalHealthPerUnit() {
     ShieldBearer shieldbearer;
-    return shieldbearer.amountOfSoldiersPerUnit * shieldbearer.healthPerSoldier;
+    return shieldbearer.getAmountOfSoldiersPerUnit() * shieldbearer.getHealthPerSoldier();
 }
 
 int ShieldBearerFactory::calculateTotalDamagePerUnit() {
     ShieldBearer shieldbearer;
-    return shieldbearer.amountOfSoldiersPerUnit * shieldbearer.damagePerSoldier;
+    return shieldbearer.getAmountOfSoldiersPerUnit() * shieldbearer.getDamagePerSoldier();
 
 }
 
 int ShieldBearerFactory::calculateTotalDefencePerUnit() {
     ShieldBearer shieldbearer;
-    return shieldbearer.amountOfSoldiersPerUnit * shieldbearer.defencePerSoldier;
+    return shieldbearer.getAmountOfSoldiersPerUnit() * shieldbearer.getDefencePerSoldier();
 }

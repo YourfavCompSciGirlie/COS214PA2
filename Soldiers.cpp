@@ -61,3 +61,21 @@ void Soldiers::vivificaMemento(Memento* mem)
         unitName = mem->getUnitName();
     }
 }
+
+// Added helper functions for 4.1. Factory Method
+// Used in the factory .cpp files to access attributes since the pointer is private
+int Soldiers::getHealthPerSoldier() const {
+    return healthPerSoldier;
+}
+
+int Soldiers::getDamagePerSoldier() const {
+    return damagePerSoldier;
+}
+
+int Soldiers::getDefencePerSoldier() const {
+    return defencePerSoldier;
+}
+
+int Soldiers::getAmountOfSoldiersPerUnit() const {
+    return amountOfSoldierPerUnit;
+}
