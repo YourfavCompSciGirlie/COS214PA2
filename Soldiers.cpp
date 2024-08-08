@@ -79,3 +79,24 @@ int Soldiers::getDefencePerSoldier() const {
 int Soldiers::getAmountOfSoldiersPerUnit() const {
     return amountOfSoldierPerUnit;
 }
+
+// Added helper functions for the testing main (accessing of variables outside the classes)
+void Soldiers::setHealthPerSoldier(int health) {
+     healthPerSoldier = health; 
+}
+
+void Soldiers::setDamagePerSoldier(int damage) { 
+    damagePerSoldier = damage; 
+}
+
+void Soldiers::setDefencePerSoldier(int defence) { 
+    defencePerSoldier = defence;
+}
+
+void Soldiers::setAmountOfSoldiersPerUnit(int amount) { 
+    amountOfSoldierPerUnit = amount;
+}
+
+void Soldiers::setUnitName(const std::string &name) { 
+    unitName = name; 
+}

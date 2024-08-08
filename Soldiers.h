@@ -31,6 +31,13 @@ class Soldiers{
         int getDefencePerSoldier() const;
         int getAmountOfSoldiersPerUnit() const;
 
+        // Added helper functions for the testing main (accessing of variables outside the classes)
+        void setHealthPerSoldier(int health);
+        void setDamagePerSoldier(int damage);
+        void setDefencePerSoldier(int defence);
+        void setAmountOfSoldiersPerUnit(int amount);
+        void setUnitName(const std::string &name);
+
         // Function for 4.2. Prototype (clone - making a copy of itself)
         // Pure virtual because of Abstract class
         // Will be implemented virtual in derived classes: Infantry, ShieldBearer, Boatman
