@@ -120,7 +120,7 @@ void testMementoPattern() {
 
     Caretaker caretaker;
 
-    caretaker.saveState(infantry.militusMemento());
+    caretaker.addMemento(infantry.militusMemento());
 
     infantry.setHealthPerSoldier(90);
     infantry.setDamagePerSoldier(40);
