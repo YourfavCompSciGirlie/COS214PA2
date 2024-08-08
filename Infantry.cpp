@@ -14,8 +14,8 @@ void Infantry::prepare()
 }
 void Infantry::execute()
 {
-    cout << unitName << "charges towards the enemy!!" << endl;
-    cout << "The infantry charge at the enemy with spears raised high. " << endl;
+    cout << unitName << " charges towards the enemy!!" << endl;
+    cout << "The infantry charge at the enemy with spears raised high. They violently stabbing brutally at the enemy.. " << endl;
     int battleCounter = (damagePerSoldier > defencePerSoldier) ? 0:2;
     if(battleCounter == 0)
     {
