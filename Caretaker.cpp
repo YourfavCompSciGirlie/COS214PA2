@@ -4,7 +4,7 @@ void Caretaker::addMemento(Memento* memento)
 {
     mementoList.push_back(memento);
 }
-Memento * Caretaker::getMemento(int idx)
+Memento * Caretaker::getMemento(std::vector<Memento*>::size_type idx)
 {
     if(idx < mementoList.size())
     {
