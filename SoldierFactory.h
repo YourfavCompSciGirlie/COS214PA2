@@ -18,6 +18,7 @@ class SoldierFactory {
         virtual int calculateTotalDamagePerUnit() = 0;
         virtual int calculateTotalDefencePerUnit() = 0;
 
+    public:
         // Added OWN functions
         virtual ~SoldierFactory() {}
         // SoldierFactory() {}
