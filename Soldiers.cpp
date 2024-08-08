@@ -29,7 +29,7 @@ int Soldiers::getDefence()
 
 int Soldiers::getAmountOfSoldiers()
 {
-    return amountOfSoldierPerUnit;
+    return amountOfSoldiersPerUnit;
 }
 
 string Soldiers::getName()
@@ -42,13 +42,13 @@ void Soldiers::setAttributes(int h, int dam, int def, int amt, string n)
     this->healthPerSoldier = h;
     this->damagePerSoldier = dam;
     this->defencePerSoldier = def;
-    this->amountOfSoldierPerUnit = amt;
+    this->amountOfSoldiersPerUnit = amt;
     this->unitName = n;
 }
 
 Memento* Soldiers::militusMemento()
 {
-    return new Memento(healthPerSoldier, damagePerSoldier, defencePerSoldier, amountOfSoldierPerUnit, unitName);
+    return new Memento(healthPerSoldier, damagePerSoldier, defencePerSoldier, amountOfSoldiersPerUnit, unitName);
 }
 void Soldiers::vivificaMemento(Memento* mem)
 {
@@ -57,7 +57,7 @@ void Soldiers::vivificaMemento(Memento* mem)
         healthPerSoldier = mem->getAmountOfSoldierPerUnit();
         damagePerSoldier = mem->getDamagePerSoldier();
         defencePerSoldier = mem->getDefencePerSoldier();
-        amountOfSoldierPerUnit = mem->getAmountOfSoldierPerUnit();
+        amountOfSoldiersPerUnit = mem->getAmountOfSoldierPerUnit();
         unitName = mem->getUnitName();
     }
 }
@@ -77,7 +77,7 @@ int Soldiers::getDefencePerSoldier() const {
 }
 
 int Soldiers::getAmountOfSoldiersPerUnit() const {
-    return amountOfSoldierPerUnit;
+    return amountOfSoldiersPerUnit;
 }
 
 // Added helper functions for the testing main (accessing of variables outside the classes)
@@ -94,11 +94,15 @@ void Soldiers::setDefencePerSoldier(int defence) {
 }
 
 void Soldiers::setAmountOfSoldiersPerUnit(int amount) { 
-    amountOfSoldierPerUnit = amount;
+    amountOfSoldiersPerUnit = amount;
 }
 
 void Soldiers::setUnitName(const std::string &name) { 
     unitName = name; 
+}
+
+Soldiers::Soldiers() {
+    
 }
 
 Soldiers::~Soldiers() 

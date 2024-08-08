@@ -36,7 +36,7 @@ void ShieldBearer::retreat()
 }
 void ShieldBearer::rest()
 {
-    int recovery = (healthPerSoldier + amountOfSoldierPerUnit) / 10;
+    int recovery = (healthPerSoldier + amountOfSoldiersPerUnit) / 10;
     cout << unitName << " recovers safely away from enemy troops " << recovery <<" health"<< endl;
 }
 
@@ -47,8 +47,11 @@ ShieldBearer::ShieldBearer() {
         healthPerSoldier = 120;
         damagePerSoldier = 40;
         defencePerSoldier = 50;
-        amountOfSoldierPerUnit = 8;
+        amountOfSoldiersPerUnit = 8;
         unitName = "ShieldBearer Unit";
+
+        std::cout << "ShieldBearer Soldier has been created with default values.\n";
+        std::cout << "Health: " << healthPerSoldier << ", Damage: " << damagePerSoldier << ", Defence: " << defencePerSoldier << '\n';
 }
 
 ShieldBearer::~ShieldBearer()

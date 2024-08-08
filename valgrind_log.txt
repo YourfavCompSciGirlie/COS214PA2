@@ -1,0 +1,428 @@
+==264915== Memcheck, a memory error detector
+==264915== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==264915== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==264915== Command: ./main
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EA4E: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DE5B: testFactoryMethod() (TestingMain.cpp:63)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Use of uninitialised value of size 8
+==264915==    at 0x498E92B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DE5B: testFactoryMethod() (TestingMain.cpp:63)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498E93D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DE5B: testFactoryMethod() (TestingMain.cpp:63)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EAAE: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DE5B: testFactoryMethod() (TestingMain.cpp:63)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EA4E: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DE89: testFactoryMethod() (TestingMain.cpp:64)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Use of uninitialised value of size 8
+==264915==    at 0x498E92B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DE89: testFactoryMethod() (TestingMain.cpp:64)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498E93D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DE89: testFactoryMethod() (TestingMain.cpp:64)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EAAE: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DE89: testFactoryMethod() (TestingMain.cpp:64)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EA4E: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DEB7: testFactoryMethod() (TestingMain.cpp:64)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Use of uninitialised value of size 8
+==264915==    at 0x498E92B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DEB7: testFactoryMethod() (TestingMain.cpp:64)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498E93D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DEB7: testFactoryMethod() (TestingMain.cpp:64)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EAAE: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DEB7: testFactoryMethod() (TestingMain.cpp:64)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10C9A0: InfantryFactory::createUnit() (InfantryFactory.cpp:8)
+==264915==    by 0x10DDEC: testFactoryMethod() (TestingMain.cpp:57)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EA4E: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DEF6: testFactoryMethod() (TestingMain.cpp:67)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Use of uninitialised value of size 8
+==264915==    at 0x498E92B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DEF6: testFactoryMethod() (TestingMain.cpp:67)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498E93D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DEF6: testFactoryMethod() (TestingMain.cpp:67)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EAAE: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DEF6: testFactoryMethod() (TestingMain.cpp:67)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EA4E: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF24: testFactoryMethod() (TestingMain.cpp:68)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Use of uninitialised value of size 8
+==264915==    at 0x498E92B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF24: testFactoryMethod() (TestingMain.cpp:68)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498E93D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF24: testFactoryMethod() (TestingMain.cpp:68)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EAAE: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF24: testFactoryMethod() (TestingMain.cpp:68)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EA4E: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF52: testFactoryMethod() (TestingMain.cpp:68)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Use of uninitialised value of size 8
+==264915==    at 0x498E92B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF52: testFactoryMethod() (TestingMain.cpp:68)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498E93D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF52: testFactoryMethod() (TestingMain.cpp:68)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EAAE: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF52: testFactoryMethod() (TestingMain.cpp:68)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10D466: ShieldBearerFactory::createUnit() (ShieldBearerFactory.cpp:8)
+==264915==    by 0x10DDFC: testFactoryMethod() (TestingMain.cpp:58)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EA4E: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF91: testFactoryMethod() (TestingMain.cpp:71)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Use of uninitialised value of size 8
+==264915==    at 0x498E92B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF91: testFactoryMethod() (TestingMain.cpp:71)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498E93D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF91: testFactoryMethod() (TestingMain.cpp:71)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EAAE: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DF91: testFactoryMethod() (TestingMain.cpp:71)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EA4E: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DFBF: testFactoryMethod() (TestingMain.cpp:72)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Use of uninitialised value of size 8
+==264915==    at 0x498E92B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DFBF: testFactoryMethod() (TestingMain.cpp:72)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498E93D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DFBF: testFactoryMethod() (TestingMain.cpp:72)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EAAE: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DFBF: testFactoryMethod() (TestingMain.cpp:72)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EA4E: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DFED: testFactoryMethod() (TestingMain.cpp:72)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Use of uninitialised value of size 8
+==264915==    at 0x498E92B: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DFED: testFactoryMethod() (TestingMain.cpp:72)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498E93D: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x498EA78: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DFED: testFactoryMethod() (TestingMain.cpp:72)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== Conditional jump or move depends on uninitialised value(s)
+==264915==    at 0x498EAAE: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x499D119: std::ostream& std::ostream::_M_insert<long>(long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==264915==    by 0x10DFED: testFactoryMethod() (TestingMain.cpp:72)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915==  Uninitialised value was created by a heap allocation
+==264915==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==264915==    by 0x10ACDA: BoatmanFactory::createUnit() (BoatmanFactory.cpp:8)
+==264915==    by 0x10DE0C: testFactoryMethod() (TestingMain.cpp:59)
+==264915==    by 0x10DC93: main (TestingMain.cpp:32)
+==264915== 
+==264915== 
+==264915== HEAP SUMMARY:
+==264915==     in use at exit: 0 bytes in 0 blocks
+==264915==   total heap usage: 8 allocs, 8 frees, 74,206 bytes allocated
+==264915== 
+==264915== All heap blocks were freed -- no leaks are possible
+==264915== 
+==264915== For lists of detected and suppressed errors, rerun with: -s
+==264915== ERROR SUMMARY: 36 errors from 36 contexts (suppressed: 0 from 0)

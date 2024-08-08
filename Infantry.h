@@ -12,7 +12,7 @@ class Infantry : public Soldiers
         int healthPerSoldier;
         int damagePerSoldier;
         int defencePerSoldier;
-        int amountOfSoldierPerUnit;
+        int amountOfSoldiersPerUnit;
         string unitName;
 
         //methods which are private

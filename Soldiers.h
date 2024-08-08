@@ -11,7 +11,7 @@ class Soldiers{
         int healthPerSoldier;
         int damagePerSoldier;
         int defencePerSoldier;
-        int amountOfSoldierPerUnit;
+        int amountOfSoldiersPerUnit;
         string unitName;
 
         // methods
@@ -56,6 +56,7 @@ class Soldiers{
         Memento* militusMemento();
         void vivificaMemento(Memento* mem);
 
+        Soldiers();
         virtual ~Soldiers();
 
         void setAttributes(int h, int dam, int def, int amt, string n);

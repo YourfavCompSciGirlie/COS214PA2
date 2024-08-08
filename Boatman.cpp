@@ -39,7 +39,7 @@ void Boatman::retreat()
 }
 void Boatman::rest()
 {
-    int recovery = (healthPerSoldier + amountOfSoldierPerUnit) / 10;
+    int recovery = (healthPerSoldier + amountOfSoldiersPerUnit) / 10;
     cout << unitName << " recovers safely away from enemy troops " << recovery <<" health"<< endl;
 }
 
@@ -48,8 +48,11 @@ Boatman::Boatman() {
         healthPerSoldier = 80;
         damagePerSoldier = 70;
         defencePerSoldier = 20;
-        amountOfSoldierPerUnit = 15;
+        amountOfSoldiersPerUnit = 15;
         unitName = "Boatman Unit";
+
+        std::cout << "Boatman Soldier has been created with default values.\n";
+        std::cout << "Health: " << healthPerSoldier << ", Damage: " << damagePerSoldier << ", Defence: " << defencePerSoldier << '\n';
 }
 
 Boatman::~Boatman()

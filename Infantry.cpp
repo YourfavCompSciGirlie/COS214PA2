@@ -45,7 +45,7 @@ void Infantry::retreat()
 }
 void Infantry::rest()
 {
-    int recovBoost = (healthPerSoldier + amountOfSoldierPerUnit)/10;
+    int recovBoost = (healthPerSoldier + amountOfSoldiersPerUnit)/10;
     cout << unitName << " is resting, +" << recovBoost << " health to the infantry " << endl; 
 
 }
@@ -56,8 +56,11 @@ Infantry::Infantry() {
         healthPerSoldier = 100;
         damagePerSoldier = 50;
         defencePerSoldier = 30;
-        amountOfSoldierPerUnit = 10;
+        amountOfSoldiersPerUnit = 10;
         unitName = "Infantry Unit";
+
+        std::cout << "Infantry Soldier has been created with default values.\n";
+        std::cout << "Health: " << healthPerSoldier << ", Damage: " << damagePerSoldier << ", Defence: " << defencePerSoldier << '\n';
 }
 
 
