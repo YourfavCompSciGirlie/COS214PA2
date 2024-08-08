@@ -43,10 +43,22 @@ void Boatman::rest()
     cout << unitName << " recovers safely away from enemy troops " << recovery <<" health"<< endl;
 }
 
-    // Function for 4.2. Prototype (clone - making a copy of itself)
-    // Implementation made virtual (different from the UML)
-    Soldiers* Boatman::clonis()
-    {
-        // DEEP COPY
-        return new Boatman(*this);
-    }
+// Function for 4.2. Prototype (clone - making a copy of itself)
+// Implementation made virtual (different from the UML)
+Soldiers* Boatman::clonis()
+{
+// DEEP COPY
+    return new Boatman(*this);
+}
+
+
+void Boatman::engage()
+{
+    prepare();
+    execute();
+}
+void Boatman::disengage()
+{
+    retreat();
+    rest();
+}

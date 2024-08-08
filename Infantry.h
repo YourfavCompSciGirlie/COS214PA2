@@ -30,6 +30,11 @@ class Infantry : public Soldiers
 
         //void engage();
         //void disengage();
+
+        ~Infantry();
+
+        void engage();
+        void disengage();
 };
 
 #endif

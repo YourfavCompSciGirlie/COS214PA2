@@ -67,4 +67,4 @@ class Soldiers{
         string getName();
 };
 
-#endif;
+#endif

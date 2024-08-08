@@ -40,10 +40,21 @@ void ShieldBearer::rest()
     cout << unitName << " recovers safely away from enemy troops " << recovery <<" health"<< endl;
 }
 
-    // Function for 4.2. Prototype (clone - making a copy of itself)
-    // Implementation made virtual (different from the UML)
-    Soldiers* ShieldBearer::clonis()
-    {
-        // DEEP COPY
-        return new ShieldBearer(*this);
-    }
+// Function for 4.2. Prototype (clone - making a copy of itself)
+// Implementation made virtual (different from the UML)
+Soldiers* ShieldBearer::clonis()
+{
+// DEEP COPY
+return new ShieldBearer(*this);
+}
+
+void ShieldBearer::engage()
+{
+    prepare();
+    execute();
+}
+void ShieldBearer::disengage()
+{
+    retreat();
+    rest();
+}
