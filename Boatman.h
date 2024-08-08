@@ -30,4 +30,4 @@ class Boatman : public Soldiers
         virtual Soldiers* clonis();
 };
 
-#endif;
+#endif
