@@ -6,7 +6,7 @@ void ShieldBearer::prepare()
 {
     cout << unitName << " prepares for battle by forming a strong defense line "<< endl;
     int defense = (healthPerSoldier + defencePerSoldier)/10;
-    cout << "Defence boost : +"<< defense << " to the Shield Bearers"<< endl;
+    cout << "Defence boost : +"<< defense << " points to the Shield Bearers"<< endl;
 
 }
 void ShieldBearer::execute()

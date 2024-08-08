@@ -7,7 +7,7 @@ void Boatman::prepare()
     cout << unitName << " prepares for battle!!!" << endl;
     cout << "Boatmen position their boats... " << endl;
     int boost= (healthPerSoldier + defencePerSoldier)/10;
-    cout << boost << " points to the units " << endl; 
+    cout << "+" << boost << " points to the units " << endl; 
 }
 void Boatman::execute()
 {
@@ -34,13 +34,13 @@ void Boatman::retreat()
         cout << unitName << " has retreated safely far away from enemy troops "<< endl;
     }
     else{
-        cout << " they cannot escape" << endl;
+        cout << unitName << " they cannot escape" << endl;
     }
 }
 void Boatman::rest()
 {
     int recovery = (healthPerSoldier + amountOfSoldiersPerUnit) / 10;
-    cout << unitName << " recovers safely away from enemy troops " << recovery <<" health"<< endl;
+    cout << unitName << " recovers safely away from enemy troops +" << recovery <<" health points"<< endl;
 }
 
 // Added edited (default) constructor for 4.1. Factory Method to set default values when creating units and soldiers

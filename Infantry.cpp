@@ -10,7 +10,7 @@ void Infantry::prepare()
 
     cout<< unitName << " prepares for battle! " << endl;
     int boosters = (healthPerSoldier + defencePerSoldier) / 10;
-    cout << "Booster : " << boosters<< " points to the Infantry" << endl;
+    cout << "Booster : +" << boosters<< " points to the Infantry" << endl;
 }
 void Infantry::execute()
 {
@@ -46,7 +46,7 @@ void Infantry::retreat()
 void Infantry::rest()
 {
     int recovBoost = (healthPerSoldier + amountOfSoldiersPerUnit)/10;
-    cout << unitName << " is resting, +" << recovBoost << " health to the infantry " << endl; 
+    cout << unitName << " is resting, +" << recovBoost << " health points to the infantry " << endl; 
 
 }
 
