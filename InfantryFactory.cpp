@@ -9,17 +9,17 @@ Soldiers* InfantryFactory::createUnit() {
 }
 
 int InfantryFactory::calculateTotalHealthPerUnit() {
-    Infantry infantry;
-    return infantry.getAmountOfSoldiersPerUnit() * infantry.getHealthPerSoldier();
+    // Calculate based on an Infantry instance created by createUnit()
+    Soldiers* infantry = createUnit(); 
+    return infantry->getAmountOfSoldiersPerUnit() * infantry->getHealthPerSoldier();
 }
 
 int InfantryFactory::calculateTotalDamagePerUnit() {
-    Infantry infantry;
-    return infantry.getAmountOfSoldiersPerUnit() * infantry.getDamagePerSoldier();
-
+    Soldiers* infantry = createUnit(); 
+    return infantry->getAmountOfSoldiersPerUnit() * infantry->getDamagePerSoldier();
 }
 
 int InfantryFactory::calculateTotalDefencePerUnit() {
-    Infantry infantry;
-    return infantry.getAmountOfSoldiersPerUnit() * infantry.getDefencePerSoldier();
+    Soldiers* infantry = createUnit(); 
+    return infantry->getAmountOfSoldiersPerUnit() * infantry->getDefencePerSoldier();
 }

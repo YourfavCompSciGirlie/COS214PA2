@@ -13,7 +13,7 @@ class ShieldBearer : public Soldiers
         int healthPerSoldier;
         int damagePerSoldier;
         int defencePerSoldier;
-        int amountOfSoldierPerUnit;
+        int amountOfSoldiersPerUnit;
         string unitName;
         
         //methods which are private
@@ -24,6 +24,10 @@ class ShieldBearer : public Soldiers
         void rest();
 
     public:
+
+        // Added edited (default) constructor for 4.1. Factory Method to set default values when creating units and soldiers
+        ShieldBearer();
+        ~ShieldBearer();
 
         // Function for 4.2. Prototype (clone - making a copy of itself)
         // Implementation made virtual (different from the UML)

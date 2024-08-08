@@ -45,10 +45,24 @@ void Infantry::retreat()
 }
 void Infantry::rest()
 {
-    int recovBoost = (healthPerSoldier + amountOfSoldierPerUnit)/10;
+    int recovBoost = (healthPerSoldier + amountOfSoldiersPerUnit)/10;
     cout << unitName << " is resting, +" << recovBoost << " health to the infantry " << endl; 
 
 }
+
+
+// Added edited (default) constructor for 4.1. Factory Method to set default values when creating units and soldiers
+Infantry::Infantry() {
+        healthPerSoldier = 100;
+        damagePerSoldier = 50;
+        defencePerSoldier = 30;
+        amountOfSoldiersPerUnit = 10;
+        unitName = "Infantry Unit";
+
+        std::cout << "Infantry Soldier has been created with default values.\n";
+        std::cout << "Health: " << healthPerSoldier << ", Damage: " << damagePerSoldier << ", Defence: " << defencePerSoldier << '\n';
+}
+
 
 // Function for 4.2. Prototype (clone - making a copy of itself)
 // Implementation made virtual (different from the UML)
@@ -60,7 +74,7 @@ Soldiers* Infantry::clonis()
 
 Infantry::~Infantry()
 {
-    cout<< "Infantry has been destroyed "<< endl; 
+    cout<< "Infantry has been destroyed."<< endl; 
 }
 
 void Infantry::engage()
