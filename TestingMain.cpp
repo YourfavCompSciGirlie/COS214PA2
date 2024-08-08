@@ -28,17 +28,21 @@ int main() {
     cout << "------------------------- Testing Main Starts ----------------------------" << endl << endl;
 
     // Calling the external testing classes:
-    cout << "------------------------- Testing Factory Method -------------------------" << endl << endl;
+    cout << "------------------------- Testing Factory Method -------------------------" << endl;
     testFactoryMethod();
+    cout << endl;
 
-    cout << "------------------------- Testing Prototype ------------------------------" << endl << endl;
+    cout << "------------------------- Testing Prototype ------------------------------" << endl;
     testPrototypePattern();
+    cout << endl;
 
-    cout << "------------------------- Testing Template Method -------------------------" << endl << endl;
+    cout << "------------------------- Testing Template Method -------------------------" << endl;
     testTemplateMethod();
+    cout << endl;
 
     cout << "------------------------- Testing Memento ---------------------------------" << endl << endl;
     testMementoPattern();
+    cout << endl;
     
     return 0;
 }
