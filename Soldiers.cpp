@@ -54,7 +54,7 @@ void Soldiers::vivificaMemento(Memento* mem)
 {
     if(mem)
     {
-        healthPerSoldier = mem->getAmountOfSoldierPerUnit();
+        healthPerSoldier = mem->getHealthPerSoldier();
         damagePerSoldier = mem->getDamagePerSoldier();
         defencePerSoldier = mem->getDefencePerSoldier();
         amountOfSoldiersPerUnit = mem->getAmountOfSoldierPerUnit();
