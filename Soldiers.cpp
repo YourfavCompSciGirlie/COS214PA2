@@ -101,4 +101,7 @@ void Soldiers::setUnitName(const std::string &name) {
     unitName = name; 
 }
 
-Soldiers::~Soldiers() {}
+Soldiers::~Soldiers() 
+{
+    cout<< "Soldiers has been destroyed."<< endl; 
+}
