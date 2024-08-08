@@ -19,3 +19,13 @@ Caretaker::~Caretaker()
         delete it;
     }
 }
+
+// Need to check this
+Memento* Caretaker::restoreState() {
+    if (!mementoList.empty()) {
+        Memento* memento = mementoList.back();
+        mementoList.pop_back();
+        return memento;
+    }
+    return nullptr;
+}
