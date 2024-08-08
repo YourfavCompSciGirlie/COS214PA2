@@ -19,7 +19,8 @@ class BoatmanFactory : public SoldierFactory {
         virtual int calculateTotalDefencePerUnit();
 
         // Added OWN functions
-        // BoatmanFactory() {}
+        BoatmanFactory();
+        ~BoatmanFactory();
 };
 
 #endif // BOATMANFACTORY_H

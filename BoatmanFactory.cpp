@@ -4,6 +4,15 @@
 #include "SoldierFactory.h"
 #include "Boatman.h"
 
+BoatmanFactory::BoatmanFactory()
+{
+    cout << "Boatman factory created... " << endl;
+}
+BoatmanFactory::~BoatmanFactory()
+{
+    cout << "Boatman Factory destroyed :( "<< endl;
+}
+
 Soldiers* BoatmanFactory::createUnit() {
     return new Boatman();
 }

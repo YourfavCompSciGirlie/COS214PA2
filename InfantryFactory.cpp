@@ -4,6 +4,15 @@
 #include "SoldierFactory.h"
 #include "Infantry.h"
 
+InfantryFactory::InfantryFactory()
+{
+    cout << "Infantry Factory created " << endl;
+}
+InfantryFactory::~InfantryFactory()
+{
+    cout << "Infantry factory destroyed " << endl;
+}
+
 Soldiers* InfantryFactory::createUnit() {
     return new Infantry();
 }

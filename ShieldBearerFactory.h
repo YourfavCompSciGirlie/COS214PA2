@@ -19,7 +19,8 @@ class ShieldBearerFactory : public SoldierFactory {
         virtual int calculateTotalDefencePerUnit();
 
         // Added OWN functions
-        // ShieldBearerFactory() {}
+        ShieldBearerFactory();
+        ~ShieldBearerFactory();
 };
 
 #endif // SHIELDBEARERFACTORY_H

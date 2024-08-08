@@ -20,7 +20,8 @@ class InfantryFactory : public SoldierFactory {
         virtual int calculateTotalDefencePerUnit();
 
         // Added OWN functions
-        // InfantryFactory() {}
+        InfantryFactory();
+        ~InfantryFactory();
 };
 
 #endif // INFANTRYFACTORY_H

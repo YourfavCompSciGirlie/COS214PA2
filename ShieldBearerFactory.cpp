@@ -4,6 +4,15 @@
 #include "SoldierFactory.h"
 #include "ShieldBearer.h"
 
+ShieldBearerFactory::ShieldBearerFactory()
+{
+    cout << "ShieldBearer Factory created " << endl;
+}
+ShieldBearerFactory::~ShieldBearerFactory()
+{
+    cout << "ShieldBearer Factory destroyed" << endl;
+}
+
 Soldiers* ShieldBearerFactory::createUnit() {
     return new ShieldBearer();
 }
