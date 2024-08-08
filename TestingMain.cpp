@@ -16,6 +16,11 @@
 
 using namespace std;
 
+void testFactoryMethod();
+void testPrototypePattern();
+void testTemplateMethod();
+void testMementoPattern();
+
 
 int main() {
 
@@ -120,7 +125,7 @@ void testMementoPattern() {
 
     Caretaker caretaker;
 
-    caretaker.addMemento(infantry.militusMemento());
+    //caretaker.addMemento(infantry.militusMemento());
 
     infantry.setHealthPerSoldier(90);
     infantry.setDamagePerSoldier(40);
@@ -131,7 +136,7 @@ void testMementoPattern() {
               << ", Damage: " << infantry.getDamagePerSoldier() 
               << ", Defence: " << infantry.getDefencePerSoldier() << '\n';
 
-    infantry.vivificaMemento(caretaker.restoreState());
+    //infantry.vivificaMemento(caretaker.restoreState());
 
     std::cout << "Restored Infantry - Health: " << infantry.getHealthPerSoldier() 
               << ", Damage: " << infantry.getDamagePerSoldier() 

@@ -82,7 +82,7 @@ int Soldiers::getAmountOfSoldiersPerUnit() const {
 
 // Added helper functions for the testing main (accessing of variables outside the classes)
 void Soldiers::setHealthPerSoldier(int health) {
-     healthPerSoldier = health; 
+    healthPerSoldier = health; 
 }
 
 void Soldiers::setDamagePerSoldier(int damage) { 
@@ -100,3 +100,5 @@ void Soldiers::setAmountOfSoldiersPerUnit(int amount) {
 void Soldiers::setUnitName(const std::string &name) { 
     unitName = name; 
 }
+
+Soldiers::~Soldiers() {}

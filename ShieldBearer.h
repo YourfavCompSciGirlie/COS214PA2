@@ -29,6 +29,9 @@ class ShieldBearer : public Soldiers
         // Implementation made virtual (different from the UML)
         virtual Soldiers* clonis();
 
+        void engage();
+        void disengage();
+
 };
 
 #endif
