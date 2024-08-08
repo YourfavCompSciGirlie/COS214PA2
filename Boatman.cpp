@@ -43,6 +43,20 @@ void Boatman::rest()
     cout << unitName << " recovers safely away from enemy troops " << recovery <<" health"<< endl;
 }
 
+// Added edited (default) constructor for 4.1. Factory Method to set default values when creating units and soldiers
+Boatman::Boatman() {
+        healthPerSoldier = 80;
+        damagePerSoldier = 70;
+        defencePerSoldier = 20;
+        amountOfSoldierPerUnit = 15;
+        unitName = "Boatman Unit";
+}
+
+Boatman::~Boatman()
+{
+    cout<< "Boatman has been destroyed."<< endl; 
+}
+
 // Function for 4.2. Prototype (clone - making a copy of itself)
 // Implementation made virtual (different from the UML)
 Soldiers* Boatman::clonis()

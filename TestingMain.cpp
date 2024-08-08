@@ -25,19 +25,19 @@ void testMementoPattern();
 int main() {
 
     // This will be our testing main :)
-    cout << "------------------------- Testing Main Starts -------------------------" << endl;
+    cout << "------------------------- Testing Main Starts ----------------------------" << endl << endl;
 
     // Calling the external testing classes:
-    cout << "------------------------- Testing Factory Method -------------------------" << endl;
+    cout << "------------------------- Testing Factory Method -------------------------" << endl << endl;
     testFactoryMethod();
 
-    cout << "------------------------- Testing Prototype -------------------------" << endl;
+    cout << "------------------------- Testing Prototype ------------------------------" << endl << endl;
     testPrototypePattern();
 
-    cout << "------------------------- Testing Template Method -------------------------" << endl;
+    cout << "------------------------- Testing Template Method -------------------------" << endl << endl;
     testTemplateMethod();
 
-    cout << "------------------------- Testing Memento -------------------------" << endl;
+    cout << "------------------------- Testing Memento ---------------------------------" << endl << endl;
     testMementoPattern();
     
     return 0;

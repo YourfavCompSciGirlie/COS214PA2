@@ -40,6 +40,22 @@ void ShieldBearer::rest()
     cout << unitName << " recovers safely away from enemy troops " << recovery <<" health"<< endl;
 }
 
+
+
+// Added edited (default) constructor for 4.1. Factory Method to set default values when creating units and soldiers
+ShieldBearer::ShieldBearer() {
+        healthPerSoldier = 120;
+        damagePerSoldier = 40;
+        defencePerSoldier = 50;
+        amountOfSoldierPerUnit = 8;
+        unitName = "ShieldBearer Unit";
+}
+
+ShieldBearer::~ShieldBearer()
+{
+    cout<< "ShieldBearer has been destroyed."<< endl; 
+}
+
 // Function for 4.2. Prototype (clone - making a copy of itself)
 // Implementation made virtual (different from the UML)
 Soldiers* ShieldBearer::clonis()

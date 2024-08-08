@@ -50,6 +50,17 @@ void Infantry::rest()
 
 }
 
+
+// Added edited (default) constructor for 4.1. Factory Method to set default values when creating units and soldiers
+Infantry::Infantry() {
+        healthPerSoldier = 100;
+        damagePerSoldier = 50;
+        defencePerSoldier = 30;
+        amountOfSoldierPerUnit = 10;
+        unitName = "Infantry Unit";
+}
+
+
 // Function for 4.2. Prototype (clone - making a copy of itself)
 // Implementation made virtual (different from the UML)
 Soldiers* Infantry::clonis()
@@ -60,7 +71,7 @@ Soldiers* Infantry::clonis()
 
 Infantry::~Infantry()
 {
-    cout<< "Infantry has been destroyed "<< endl; 
+    cout<< "Infantry has been destroyed."<< endl; 
 }
 
 void Infantry::engage()

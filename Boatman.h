@@ -25,6 +25,10 @@ class Boatman : public Soldiers
 
     public:
 
+        // Added edited (default) constructor for 4.1. Factory Method to set default values when creating units and soldiers
+        Boatman();
+        ~Boatman();
+
         // Function for 4.2. Prototype (clone - making a copy of itself)
         // Implementation made virtual (different from the UML)
         virtual Soldiers* clonis();
