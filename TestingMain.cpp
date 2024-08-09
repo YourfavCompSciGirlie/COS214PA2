@@ -20,6 +20,7 @@ void testFactoryMethod();
 void testPrototypePattern();
 void testTemplateMethod();
 void testMementoPattern();
+void testCalculateFunctions();
 
 
 int main() {
@@ -28,7 +29,11 @@ int main() {
     cout << "------------------------- Testing Main Starts ----------------------------" << endl << endl;
 
     // Calling the external testing classes:
-    cout << "------------------------- Testing Factory Method -------------------------" << endl;
+    cout << "------------------------- Testing Factory Method 1 -----------------------" << endl;
+    testCalculateFunctions();
+    cout << endl;
+
+    cout << "------------------------- Testing Factory Method 2 -----------------------" << endl;
     testFactoryMethod();
     cout << endl;
 
@@ -45,6 +50,30 @@ int main() {
     cout << endl;
     
     return 0;
+}
+
+
+void testCalculateFunctions() {
+    InfantryFactory infantryFactory;
+    ShieldBearerFactory shieldBearerFactory;
+    BoatmanFactory boatmanFactory;
+
+    std::cout << "Testing Calculate Functions:\n";
+
+    // Test calculateTotalHealthPerUnit
+    std::cout << "Infantry Total Health: " << infantryFactory.calculateTotalHealthPerUnit() << '\n';
+    std::cout << "ShieldBearer Total Health: " << shieldBearerFactory.calculateTotalHealthPerUnit() << '\n';
+    std::cout << "Boatman Total Health: " << boatmanFactory.calculateTotalHealthPerUnit() << '\n';
+
+    // Test calculateTotalDamagePerUnit
+    std::cout << "Infantry Total Damage: " << infantryFactory.calculateTotalDamagePerUnit() << '\n';
+    std::cout << "ShieldBearer Total Damage: " << shieldBearerFactory.calculateTotalDamagePerUnit() << '\n';
+    std::cout << "Boatman Total Damage: " << boatmanFactory.calculateTotalDamagePerUnit() << '\n';
+
+    // Test calculateTotalDefencePerUnit
+    std::cout << "Infantry Total Defence: " << infantryFactory.calculateTotalDefencePerUnit() << '\n';
+    std::cout << "ShieldBearer Total Defence: " << shieldBearerFactory.calculateTotalDefencePerUnit() << '\n';
+    std::cout << "Boatman Total Defence: " << boatmanFactory.calculateTotalDefencePerUnit() << '\n';
 }
 
 

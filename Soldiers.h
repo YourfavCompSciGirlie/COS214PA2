@@ -30,6 +30,7 @@ class Soldiers{
         int getDamagePerSoldier() const;
         int getDefencePerSoldier() const;
         int getAmountOfSoldiersPerUnit() const;
+        string getUnitName() const;
 
         // Added helper functions for the testing main (accessing of variables outside the classes)
         void setHealthPerSoldier(int health);
@@ -60,12 +61,6 @@ class Soldiers{
         virtual ~Soldiers();
 
         void setAttributes(int h, int dam, int def, int amt, string n);
-
-        int getHealth();
-        int getDamage();
-        int getDefence();
-        int getAmountOfSoldiers();
-        string getName();
 };
 
 #endif

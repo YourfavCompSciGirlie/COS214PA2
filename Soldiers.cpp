@@ -12,31 +12,6 @@ void Soldiers::disengage()
     rest();
 }
 
-int Soldiers::getHealth()
-{
-    return healthPerSoldier;
-}
-
-int Soldiers::getDamage()
-{
-    return damagePerSoldier;
-}
-
-int Soldiers::getDefence()
-{
-    return defencePerSoldier;
-}
-
-int Soldiers::getAmountOfSoldiers()
-{
-    return amountOfSoldiersPerUnit;
-}
-
-string Soldiers::getName()
-{
-    return unitName;
-}
-
 void Soldiers::setAttributes(int h, int dam, int def, int amt, string n)
 {
     this->healthPerSoldier = h;
@@ -57,7 +32,7 @@ void Soldiers::vivificaMemento(Memento* mem)
         healthPerSoldier = mem->getHealthPerSoldier();
         damagePerSoldier = mem->getDamagePerSoldier();
         defencePerSoldier = mem->getDefencePerSoldier();
-        amountOfSoldiersPerUnit = mem->getAmountOfSoldierPerUnit();
+        amountOfSoldiersPerUnit = mem->getAmountOfSoldiersPerUnit();
         unitName = mem->getUnitName();
     }
 }
@@ -78,6 +53,10 @@ int Soldiers::getDefencePerSoldier() const {
 
 int Soldiers::getAmountOfSoldiersPerUnit() const {
     return amountOfSoldiersPerUnit;
+}
+
+string Soldiers::getUnitName() const {
+    return unitName;
 }
 
 // Added helper functions for the testing main (accessing of variables outside the classes)
@@ -102,7 +81,7 @@ void Soldiers::setUnitName(const std::string &name) {
 }
 
 Soldiers::Soldiers() {
-    
+    cout << "Soldier making is in procession.. " << endl;
 }
 
 Soldiers::~Soldiers() 

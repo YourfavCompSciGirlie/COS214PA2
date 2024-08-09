@@ -21,7 +21,7 @@ class SoldierFactory {
     public:
         // Added OWN functions
         virtual ~SoldierFactory();
-        SoldierFactory() {}
+        SoldierFactory();
 };
 
 #endif // SOLDIERFACTORY_H
