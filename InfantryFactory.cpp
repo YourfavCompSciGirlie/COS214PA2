@@ -4,31 +4,40 @@
 #include "SoldierFactory.h"
 #include "Infantry.h"
 
-InfantryFactory::InfantryFactory()
-{
-    cout << "Infantry Factory created " << endl;
+InfantryFactory::InfantryFactory() {
+    cout << "Infantry Factory created." << endl;
 }
-InfantryFactory::~InfantryFactory()
-{
-    cout << "Infantry factory destroyed " << endl;
+
+
+
+InfantryFactory::~InfantryFactory() {
+    cout << "Infantry factory destroyed." << endl;
 }
+
+
 
 Soldiers* InfantryFactory::createUnit() {
     return new Infantry();
 }
 
-int InfantryFactory::calculateTotalHealthPerUnit() {
-    // Calculate based on an Infantry instance created by createUnit()
-    Soldiers* infantry = createUnit(); 
+
+
+int InfantryFactory::calculateTotalHealthPerUnit() { 
+    Soldiers* infantry  = createUnit();
     return infantry->getAmountOfSoldiersPerUnit() * infantry->getHealthPerSoldier();
+
 }
 
+
+
 int InfantryFactory::calculateTotalDamagePerUnit() {
-    Soldiers* infantry = createUnit(); 
+    Soldiers* infantry  = createUnit();
     return infantry->getAmountOfSoldiersPerUnit() * infantry->getDamagePerSoldier();
 }
 
+
+
 int InfantryFactory::calculateTotalDefencePerUnit() {
-    Soldiers* infantry = createUnit(); 
+    Soldiers* infantry  = createUnit();
     return infantry->getAmountOfSoldiersPerUnit() * infantry->getDefencePerSoldier();
 }

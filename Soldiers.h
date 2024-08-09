@@ -26,18 +26,18 @@ class Soldiers{
 
         // Added helper functions for 4.1. Factory Method
         // Used in the factory .cpp files to access attributes since the pointer is private
-        int getHealthPerSoldier() const;
-        int getDamagePerSoldier() const;
-        int getDefencePerSoldier() const;
-        int getAmountOfSoldiersPerUnit() const;
-        string getUnitName() const;
+        virtual int getHealthPerSoldier() const = 0;
+        virtual int getDamagePerSoldier() const = 0;
+        virtual int getDefencePerSoldier() const = 0;
+        virtual int getAmountOfSoldiersPerUnit() const = 0;
+        virtual string getUnitName() const = 0;
 
         // Added helper functions for the testing main (accessing of variables outside the classes)
-        void setHealthPerSoldier(int health);
-        void setDamagePerSoldier(int damage);
-        void setDefencePerSoldier(int defence);
-        void setAmountOfSoldiersPerUnit(int amount);
-        void setUnitName(const std::string &name);
+        virtual void setHealthPerSoldier(int health) = 0;
+        virtual void setDamagePerSoldier(int damage) = 0;
+        virtual void setDefencePerSoldier(int defence) = 0;
+        virtual void setAmountOfSoldiersPerUnit(int amount) = 0;
+        virtual void setUnitName(const std::string &name) = 0;
 
         // Function for 4.2. Prototype (clone - making a copy of itself)
         // Pure virtual because of Abstract class

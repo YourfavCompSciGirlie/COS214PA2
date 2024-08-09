@@ -4,6 +4,7 @@
 #define BOATMANFACTORY_H
 
 #include "SoldierFactory.h"
+#include "Soldiers.h"
 #include "Boatman.h"
 
 using namespace std;
@@ -13,10 +14,10 @@ class SoldierFactory;
 class BoatmanFactory : public SoldierFactory {
 
     public:
-        virtual Soldiers* createUnit();
-        virtual int calculateTotalHealthPerUnit();
-        virtual int calculateTotalDamagePerUnit();
-        virtual int calculateTotalDefencePerUnit();
+        Soldiers* createUnit();
+        int calculateTotalHealthPerUnit();
+        int calculateTotalDamagePerUnit();
+        int calculateTotalDefencePerUnit();
 
         // Added OWN functions
         BoatmanFactory();
