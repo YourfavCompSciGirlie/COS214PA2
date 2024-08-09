@@ -180,30 +180,55 @@ void testMementoPattern() {
 
     cout << endl; 
 
-    infantry.setHealthPerSoldier(152);
-    infantry.setDamagePerSoldier(67);
-    infantry.setDefencePerSoldier(30);
-    infantry.setAmountOfSoldiersPerUnit(15);
-    infantry.setUnitName("Infantry Unit 23");
+    // Initial state
+    infantry.setAttributes(152, 67, 30, 15, "Infantry Unit 23");
 
+    // Save the initial state
     Caretaker caretaker;
+    Memento* savedState1 = infantry.militusMemento();
+    caretaker.addMemento(savedState1);
 
-    caretaker.addMemento(infantry.militusMemento());
+    // Modify the state
+    infantry.setAttributes(120, 55, 25, 10, "Modified Unit");
 
-    infantry.setHealthPerSoldier(90);
-    infantry.setDamagePerSoldier(40);
-    infantry.setDefencePerSoldier(20);
+    // Save the modified state
+    Memento* savedState2 = infantry.militusMemento();
+    caretaker.addMemento(savedState2);
 
+    // Further modify the state
+    infantry.setAttributes(90, 40, 20, 5, "Further Modified Unit");
+
+    // Save the further modified state
+    Memento* savedState3 = infantry.militusMemento();
+    caretaker.addMemento(savedState3);
+
+    // Restore to the first saved state
+    infantry.vivificaMemento(caretaker.getMemento(0));
+
+    // Display current state after restoration
     std::cout << "- Memento Pattern Test:\n";
-    std::cout << "Current Infantry - Health: " << infantry.getHealthPerSoldier() 
+    std::cout << "Restored to Initial State - Health: " << infantry.getHealthPerSoldier() 
               << ", Damage: " << infantry.getDamagePerSoldier() 
-              << ", Defence: " << infantry.getDefencePerSoldier() << '\n';
+              << ", Defence: " << infantry.getDefencePerSoldier() 
+              << ", Unit Name: " << infantry.getUnitName() << '\n';
 
-    infantry.vivificaMemento(caretaker.restoreState());
+    // Restore to the second saved state
+    infantry.vivificaMemento(caretaker.getMemento(1));
 
-    std::cout << "Restored Infantry - Health: " << infantry.getHealthPerSoldier() 
+    // Display current state after second restoration
+    std::cout << "Restored to Modified State - Health: " << infantry.getHealthPerSoldier() 
               << ", Damage: " << infantry.getDamagePerSoldier() 
-              << ", Defence: " << infantry.getDefencePerSoldier() << '\n';
+              << ", Defence: " << infantry.getDefencePerSoldier() 
+              << ", Unit Name: " << infantry.getUnitName() << '\n';
+
+    // Restore to the third saved state
+    infantry.vivificaMemento(caretaker.getMemento(2));
+
+    // Display current state after third restoration
+    std::cout << "Restored to Further Modified State - Health: " << infantry.getHealthPerSoldier() 
+              << ", Damage: " << infantry.getDamagePerSoldier() 
+              << ", Defence: " << infantry.getDefencePerSoldier() 
+              << ", Unit Name: " << infantry.getUnitName() << '\n';
 
     cout << endl;
 }

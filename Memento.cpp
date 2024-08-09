@@ -8,33 +8,3 @@ Memento::Memento(int value1, int value2, int value3, int value4, string value5) 
     this->amountOfSoldiersPerUnit = value4;
     this->unitName = value5;
 }
-
-
-
-int Memento::getHealthPerSoldier() const {
-    return healthPerSoldier;
-}
-
-
-
-int Memento::getDamagePerSoldier() const {
-    return damagePerSoldier;
-}
-
-
-
-int Memento::getDefencePerSoldier() const {
-    return defencePerSoldier;
-}
-
-
-
-int Memento::getAmountOfSoldiersPerUnit() const {
-    return amountOfSoldiersPerUnit;
-}
-
-
-
-string Memento::getUnitName() const {
-    return unitName;
-}

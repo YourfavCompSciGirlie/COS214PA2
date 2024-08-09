@@ -17,15 +17,6 @@ class Memento {
 
         Memento(int value1, int value2, int value3, int value4, string value5);
         friend class Soldiers;
-
-    public:
-        // Subject to change based on progression
-        int getHealthPerSoldier() const;
-        int getDamagePerSoldier() const;
-        int getDefencePerSoldier() const;
-        int getAmountOfSoldiersPerUnit() const;
-        string getUnitName() const;
-
 };
 
 #endif // MEMENTO_H

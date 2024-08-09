@@ -1,16 +1,35 @@
 #include "Soldiers.h"
 
-void Soldiers::engage()
-{
-    prepare();
-    execute();
+
+Soldiers::Soldiers() {
+    cout << "Soldier making is in procession..." << endl;
 }
 
-void Soldiers::disengage()
-{
-    retreat();
-    rest();
+
+
+Soldiers::~Soldiers() {
+    cout<< "Soldiers has been destroyed."<< endl; 
 }
+
+
+
+Memento* Soldiers::militusMemento() {
+    return new Memento(healthPerSoldier, damagePerSoldier, defencePerSoldier, amountOfSoldiersPerUnit, unitName);
+}
+
+
+
+void Soldiers::vivificaMemento(Memento* mem) {
+    if(mem) {
+        healthPerSoldier = mem->healthPerSoldier;
+        damagePerSoldier = mem->damagePerSoldier;
+        defencePerSoldier = mem->defencePerSoldier;
+        amountOfSoldiersPerUnit = mem->amountOfSoldiersPerUnit;
+        unitName = mem->unitName;
+    }
+}
+
+
 
 void Soldiers::setAttributes(int h, int dam, int def, int amt, string n)
 {
@@ -21,27 +40,17 @@ void Soldiers::setAttributes(int h, int dam, int def, int amt, string n)
     this->unitName = n;
 }
 
-Memento* Soldiers::militusMemento()
-{
-    return new Memento(healthPerSoldier, damagePerSoldier, defencePerSoldier, amountOfSoldiersPerUnit, unitName);
-}
-void Soldiers::vivificaMemento(Memento* mem)
-{
-    if(mem)
-    {
-        healthPerSoldier = mem->getHealthPerSoldier();
-        damagePerSoldier = mem->getDamagePerSoldier();
-        defencePerSoldier = mem->getDefencePerSoldier();
-        amountOfSoldiersPerUnit = mem->getAmountOfSoldiersPerUnit();
-        unitName = mem->getUnitName();
-    }
+
+
+void Soldiers::engage() {
+    prepare();
+    execute();
 }
 
-Soldiers::Soldiers() {
-    cout << "Soldier making is in procession..." << endl;
+
+
+void Soldiers::disengage() {
+    retreat();
+    rest();
 }
 
-Soldiers::~Soldiers() 
-{
-    cout<< "Soldiers has been destroyed."<< endl; 
-}

@@ -17,9 +17,6 @@ class Caretaker {
         ~Caretaker();
         void addMemento(Memento* memento);
         Memento* getMemento(int idx);
-        
-        // Still need to check this
-        Memento* restoreState();
 };
 
 #endif // CARETAKER_H
