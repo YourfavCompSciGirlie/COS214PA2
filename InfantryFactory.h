@@ -14,10 +14,10 @@ class SoldierFactory;
 class InfantryFactory : public SoldierFactory {
     
     public:
-        virtual Soldiers* createUnit();
-        virtual int calculateTotalHealthPerUnit();
-        virtual int calculateTotalDamagePerUnit();
-        virtual int calculateTotalDefencePerUnit();
+        Soldiers* createUnit();
+        int calculateTotalHealthPerUnit();
+        int calculateTotalDamagePerUnit();
+        int calculateTotalDefencePerUnit();
 
         // Added OWN functions
         InfantryFactory();

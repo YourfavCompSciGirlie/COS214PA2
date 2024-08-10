@@ -3,9 +3,10 @@
 
 #include <iostream>
 #include <string>
+
 using namespace std;
 
-class Memento{
+class Memento {
 
     private: 
         int healthPerSoldier;
@@ -16,15 +17,6 @@ class Memento{
 
         Memento(int value1, int value2, int value3, int value4, string value5);
         friend class Soldiers;
-
-    public:
-
-        //subject to change based on progression if implementation
-        int getHealthPerSoldier() const;
-        int getDamagePerSoldier() const;
-        int getDefencePerSoldier() const;
-        int getAmountOfSoldiersPerUnit() const;
-        string getUnitName() const;
-
 };
-#endif
+
+#endif // MEMENTO_H

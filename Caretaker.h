@@ -2,22 +2,21 @@
 #define CARETAKER_H
 
 #include <vector>
-#include "Memento.h"
 #include <iostream>
+
+#include "Memento.h"
+
 using namespace std;
 
-class Caretaker
-{
+class Caretaker {
+
     private:
         vector<Memento*> mementoList;
 
     public:
-        void addMemento(Memento* memento);
-        Memento * getMemento(int idx);
         ~Caretaker();
-
-        // Still need to check this
-        Memento* restoreState();
+        void addMemento(Memento* memento);
+        Memento* getMemento(int idx);
 };
 
-#endif
+#endif // CARETAKER_H

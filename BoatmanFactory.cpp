@@ -4,31 +4,39 @@
 #include "SoldierFactory.h"
 #include "Boatman.h"
 
-BoatmanFactory::BoatmanFactory()
-{
-    cout << "Boatman factory created... " << endl;
+BoatmanFactory::BoatmanFactory() {
+    cout << "Boatman factory created." << endl;
 }
-BoatmanFactory::~BoatmanFactory()
-{
-    cout << "Boatman Factory destroyed :( "<< endl;
+
+
+
+BoatmanFactory::~BoatmanFactory() {
+    cout << "Boatman Factory destroyed."<< endl;
 }
+
+
 
 Soldiers* BoatmanFactory::createUnit() {
     return new Boatman();
 }
 
+
+
 int BoatmanFactory::calculateTotalHealthPerUnit() {
-    Boatman boatman;
-    return boatman.getAmountOfSoldiersPerUnit() * boatman.getHealthPerSoldier();
+    Soldiers* boatman  = createUnit();
+    return boatman->getAmountOfSoldiersPerUnit() * boatman->getHealthPerSoldier();
 }
+
+
 
 int BoatmanFactory::calculateTotalDamagePerUnit() {
-    Boatman boatman;
-    return boatman.getAmountOfSoldiersPerUnit() * boatman.getDamagePerSoldier();
-
+    Soldiers* boatman  = createUnit();
+    return boatman->getAmountOfSoldiersPerUnit() * boatman->getDamagePerSoldier();
 }
 
+
+
 int BoatmanFactory::calculateTotalDefencePerUnit() {
-    Boatman boatman;
-    return boatman.getAmountOfSoldiersPerUnit() * boatman.getDefencePerSoldier();
+    Soldiers* boatman  = createUnit();
+    return boatman->getAmountOfSoldiersPerUnit() * boatman->getDefencePerSoldier();
 }
