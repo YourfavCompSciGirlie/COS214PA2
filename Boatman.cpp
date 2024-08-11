@@ -10,8 +10,9 @@ Boatman::Boatman() {
         defencePerSoldier = 20;
         amountOfSoldiersPerUnit = 15;
         unitName = "Boatman Unit";
-        std::cout << "Boatman Soldier has been created with default values.\n";
-        std::cout << "Health: " << healthPerSoldier << ", Damage: " << damagePerSoldier << ", Defence: " << defencePerSoldier << ", Number of soldiers: " << amountOfSoldiersPerUnit << '\n';
+        cout << "Boatman Soldier has been created with default values.\n";
+        cout << "Health: " << healthPerSoldier << ", Damage: " << damagePerSoldier << ", Defence: " << defencePerSoldier << ", Number of soldiers: " << amountOfSoldiersPerUnit << '\n';
+        cout << endl;
 }
 
 
