@@ -8,13 +8,13 @@
 
 using namespace std;
 
-class Caretaker {
+class CareTaker {
 
     private:
         vector<Memento*> mementoList;
 
     public:
-        ~Caretaker();
+        ~CareTaker();
         void addMemento(Memento* memento);
         Memento* getMemento(int idx);
 };

@@ -12,6 +12,7 @@ ShieldBearer::ShieldBearer() {
         unitName = "ShieldBearer Unit";
         std::cout << "ShieldBearer Soldier has been created with default values.\n";
         std::cout << "Health: " << healthPerSoldier << ", Damage: " << damagePerSoldier << ", Defence: " << defencePerSoldier << ", Number of soldiers: " << amountOfSoldiersPerUnit << '\n';
+        cout << endl;
 }
 
 

@@ -12,6 +12,8 @@ Infantry::Infantry() {
         unitName = "Infantry Unit";
         std::cout << "Infantry Soldier has been created with default values.\n";
         std::cout << "Health: " << healthPerSoldier << ", Damage: " << damagePerSoldier << ", Defence: " << defencePerSoldier << ", Number of soldiers: " << amountOfSoldiersPerUnit << '\n';
+
+        cout<< endl;
 }
 
 

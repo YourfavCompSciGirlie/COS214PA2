@@ -12,7 +12,7 @@
 #include "ShieldBearer.h"
 #include "Boatman.h"
 #include "Memento.h"
-#include "Caretaker.h"
+#include "CareTaker.h"
 
 using namespace std;
 
@@ -184,12 +184,12 @@ void testMementoPattern() {
     infantry.setAttributes(152, 67, 30, 15, "Infantry Unit 23");
 
     // Save the initial state
-    Caretaker caretaker;
+    CareTaker careTaker;
     Memento* savedState1 = infantry.militusMemento();
-    caretaker.addMemento(savedState1);
+    careTaker.addMemento(savedState1);
 
     // Restore to the first saved state
-    infantry.vivificaMemento(caretaker.getMemento(0));
+    infantry.vivificaMemento(careTaker.getMemento(0));
 
     // Display current state after restoration
     std::cout << "- Memento Pattern Test:\n";
@@ -203,10 +203,10 @@ void testMementoPattern() {
 
     // Save the modified state
     Memento* savedState2 = infantry.militusMemento();
-    caretaker.addMemento(savedState2);
+    careTaker.addMemento(savedState2);
 
     // Restore to the second saved state
-    infantry.vivificaMemento(caretaker.getMemento(1));
+    infantry.vivificaMemento(careTaker.getMemento(1));
 
     // Display current state after second restoration
     std::cout << "Restored to Modified State - Health: " << infantry.getHealthPerSoldier() 
@@ -219,10 +219,10 @@ void testMementoPattern() {
 
     // Save the further modified state
     Memento* savedState3 = infantry.militusMemento();
-    caretaker.addMemento(savedState3);
+    careTaker.addMemento(savedState3);
 
     // Restore to the third saved state
-    infantry.vivificaMemento(caretaker.getMemento(2));
+    infantry.vivificaMemento(careTaker.getMemento(2));
 
     // Display current state after third restoration
     std::cout << "Restored to Further Modified State - Health: " << infantry.getHealthPerSoldier() 
