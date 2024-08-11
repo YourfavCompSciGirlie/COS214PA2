@@ -44,8 +44,7 @@ class Boatman : public Soldiers {
         void setUnitName(const std::string &name);
 
         // Function for 4.2. Prototype (clone - making a copy of itself)
-        // Implementation made virtual (different from the UML)
-        virtual Soldiers* clonis();
+        Soldiers* clonis();
 
         void engage();
         void disengage();

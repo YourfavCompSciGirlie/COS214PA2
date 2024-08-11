@@ -86,7 +86,6 @@ void Boatman::setUnitName(const std::string &name) {
 
 
 // Function for 4.2. Prototype (clone - making a copy of itself)
-// Implementation made virtual (different from the UML)
 Soldiers* Boatman::clonis() {
     // DEEP COPY
     return new Boatman(*this);
