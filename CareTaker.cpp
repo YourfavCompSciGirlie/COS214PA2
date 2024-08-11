@@ -1,13 +1,13 @@
-#include "Caretaker.h"
+#include "CareTaker.h"
 
 
-void Caretaker::addMemento(Memento* memento) {
+void CareTaker::addMemento(Memento* memento) {
     mementoList.push_back(memento);
 }
 
 
 
-Memento * Caretaker::getMemento(int idx) {
+Memento * CareTaker::getMemento(int idx) {
     if (idx >= 0 && static_cast<std::vector<Memento*>::size_type>(idx) < mementoList.size()) {
         return mementoList[idx];
     }
@@ -16,7 +16,7 @@ Memento * Caretaker::getMemento(int idx) {
 
 
 
-Caretaker::~Caretaker() {
+CareTaker::~CareTaker() {
     for (auto memento : mementoList) {
             delete memento;
     }

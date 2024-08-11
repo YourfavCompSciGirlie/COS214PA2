@@ -3,6 +3,8 @@
 #include <string>
 #include <map>
 #include <list>
+#include <chrono>
+#include <thread>
 #include "SoldierFactory.h"
 #include "InfantryFactory.h"
 #include "ShieldBearerFactory.h"
@@ -12,7 +14,7 @@
 #include "ShieldBearer.h"
 #include "Boatman.h"
 #include "Memento.h"
-#include "Caretaker.h"
+#include "CareTaker.h"
 
 using namespace std;
 
@@ -24,6 +26,9 @@ void testPrototypePattern();
 void testTemplateMethod();
 void testMementoPattern();
 void printDivider(const string& title, const string& color);
+void displayMenu();
+void displayLoading(const string& color);
+void showProgressBar(int duration);
 
 // ANSI color codes
 const string RESET = "\033[0m";
@@ -44,18 +49,94 @@ const string BG_MAGENTA = "\033[45m";
 const string BG_CYAN = "\033[46m";
 const string BG_WHITE = "\033[47m";
 
+//======================================================================================================
+
+void displayMenu() {
+    cout << BOLD << "Please select an option:\n" << RESET;
+    cout << GREEN << "1. Test Calculate Functions\n";
+    cout << YELLOW << "2. Test Factory Method\n";
+    cout << CYAN << "3. Test Prototype Pattern\n";
+    cout << BLUE << "4. Test Template Method\n";
+    cout << MAGENTA << "5. Test Memento Pattern\n";
+    cout << RED << "6. Exit\n" << RESET;
+    cout << "Enter your choice: ";
+}
+
 int main() {
+
+    
+    cout << RED << BOLD << "╔═══════════════════════════════════════════════════════════════════════╗\n";
+    cout << "║                       Testing Main Starts                             ║\n";
+    cout << "╚═══════════════════════════════════════════════════════════════════════╝\n" << RESET << "\n";
+
+    showProgressBar(50);
+    int choice;
+    do {
+        displayMenu();
+        cin >> choice;
+        cout << endl;
+
+        switch(choice) {
+            case 1:
+                printDivider("Testing Factory Method 1", GREEN);
+                testCalculateFunctions();
+                break;
+            case 2:
+                printDivider("Testing Factory Method 2", YELLOW);
+                testFactoryMethod();
+                break;
+            case 3:
+                printDivider("Testing Prototype Pattern", CYAN);
+                testPrototypePattern();
+                break;
+            case 4:
+                printDivider("Testing Template Method", BLUE);
+                testTemplateMethod();
+                break;
+            case 5:
+                printDivider("Testing Memento Pattern", MAGENTA);
+                testMementoPattern();
+                break;
+            case 6:
+                cout << RED << "Exiting...\n" << RESET;
+                break;
+            default:
+                cout << RED << "Invalid choice! Please select a valid option.\n" << RESET;
+                break;
+        }
+
+        if (choice != 6) {
+            for(int i=0; i<70; i++)
+            {
+                cout<< GREEN << "\u25A0" << " " << RESET;
+            }
+            cout << endl << endl;
+        }
+    } while (choice != 6);
+
+    thankyou();
+
+    return 0;
+}
+
+
+//======================================================================================================
+
+/*int main() {
 
     cout << RED << BOLD << "╔═══════════════════════════════════════════════════════════════════════╗\n";
     cout << "║                       Testing Main Starts                             ║\n";
     cout << "╚═══════════════════════════════════════════════════════════════════════╝\n" << RESET << "\n";
 
+    showProgressBar(100);
+
     // Factory Method 1
+    //displayLoading(GREEN);
     printDivider("Testing Factory Method 1", GREEN);
     testCalculateFunctions();
     cout << endl;
 
-    for(int i=0; i<100; i++)
+    for(int i=0; i<80; i++)
     {
         cout<< GREEN << "\u25A0" << " " << RESET;
     }
@@ -66,7 +147,7 @@ int main() {
     testFactoryMethod();
     cout << endl;
 
-    for(int i=0; i<100; i++)
+    for(int i=0; i<80; i++)
     {
         cout<< YELLOW << "\u25CF" << " " << RESET;
     }
@@ -77,7 +158,7 @@ int main() {
     testPrototypePattern();
     cout << endl;
 
-    for(int i=0; i<100; i++)
+    for(int i=0; i<80; i++)
     {
         cout<< CYAN << "\u25B2" << " " << RESET;
     }
@@ -88,11 +169,11 @@ int main() {
     testTemplateMethod();
     cout << endl;
 
-    for(int i=0; i<100; i++)
+    for(int i=0; i<80; i++)
     {
         cout<< BLUE << "\u2665" << " " << RESET;
     }
-    cout << endl << endl << endl;
+    cout << endl << endl << endl;5
 
     // Memento Pattern
     printDivider("Testing Memento Pattern", MAGENTA);
@@ -119,6 +200,8 @@ int main() {
 
     return 0;
 }
+*/
+//======================================
 
 // Function to print a colored divider with a title
 void printDivider(const string& title, const string& color) {
@@ -127,11 +210,48 @@ void printDivider(const string& title, const string& color) {
     cout << "╚═══════════════════════════════════════════════════════════════════════╝\n" << RESET << "\n";
 }
 
+void displayLoading(const string& color) {
+    cout << color << "Loading";
+    for (int i = 0; i < 3; i++) {
+        cout << ".";
+        this_thread::sleep_for(chrono::milliseconds(300)); // Simulate loading time
+    }
+    cout << RESET << endl << endl;
+}
+
+
 void thankyou()
 {
     cout << endl << endl;
     cout << MAGENTA << "-------------------------------- Thank you --------------------------------" << RESET << endl << endl << endl;
 }
+
+#include <iostream>
+#include <chrono>
+#include <thread>
+
+void showProgressBar(int duration) {
+    const int barWidth = 100;
+    for (int i = 0; i <= barWidth; ++i) {
+        std::cout << RED << "\r[";
+        int pos = barWidth * i / duration;
+        for (int j = 0; j < barWidth; ++j) {
+            if (j < pos)
+                std::cout << "#";
+            else
+                std::cout << ".";
+        }
+        std::cout << "] " << (i * 100 / barWidth) << " %" << RESET;
+        std::cout.flush();
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    }
+    std::cout << std::endl;
+}
+
+// int main() {
+//     showProgressBar(100);
+//     return 0;
+// }
 
 void testCalculateFunctions() {
     InfantryFactory infantryFactory;
@@ -262,12 +382,12 @@ void testMementoPattern() {
     infantry.setAttributes(152, 67, 30, 15, "Infantry Unit 23");
 
     // Save the initial state
-    Caretaker caretaker;
+    CareTaker careTaker;
     Memento* savedState1 = infantry.militusMemento();
-    caretaker.addMemento(savedState1);
+    careTaker.addMemento(savedState1);
 
     // Restore and display
-    infantry.vivificaMemento(caretaker.getMemento(0));
+    infantry.vivificaMemento(careTaker.getMemento(0));
         cout << MAGENTA << "- Memento Pattern Test:\n\n" << RESET;
     cout << CYAN << " • Restored to Initial State:\n";
     cout << "   - Health    : " << infantry.getHealthPerSoldier() << "\n";
@@ -280,8 +400,8 @@ void testMementoPattern() {
     // Modify the state
     infantry.setAttributes(120, 55, 25, 10, "Infantry Unit 23.2");
     Memento* savedState2 = infantry.militusMemento();
-    caretaker.addMemento(savedState2);
-    infantry.vivificaMemento(caretaker.getMemento(1));
+    careTaker.addMemento(savedState2);
+    infantry.vivificaMemento(careTaker.getMemento(1));
     cout << YELLOW << " • Restored to Modified State:\n";
     cout << "   - Health    : " << infantry.getHealthPerSoldier() << "\n";
     cout << "   - Damage    : " << infantry.getDamagePerSoldier() << "\n";
@@ -292,8 +412,8 @@ void testMementoPattern() {
     // Further modify the state
     infantry.setAttributes(90, 40, 20, 5, "Infantry Unit 23.3");
     Memento* savedState3 = infantry.militusMemento();
-    caretaker.addMemento(savedState3);
-    infantry.vivificaMemento(caretaker.getMemento(2));
+    careTaker.addMemento(savedState3);
+    infantry.vivificaMemento(careTaker.getMemento(2));
     cout << RED << " • Restored to Further Modified State:\n";
     cout << "   - Health    : " << infantry.getHealthPerSoldier() << "\n";
     cout << "   - Damage    : " << infantry.getDamagePerSoldier() << "\n";
@@ -320,7 +440,7 @@ void testMementoPattern() {
 #include "ShieldBearer.h"
 #include "Boatman.h"
 #include "Memento.h"
-#include "Caretaker.h"
+#include "CareTaker.h"
 
 using namespace std;
 
@@ -535,12 +655,12 @@ void testMementoPattern() {
     infantry.setAttributes(152, 67, 30, 15, "Infantry Unit 23");
 
     // Save the initial state
-    Caretaker caretaker;
+    CareTaker careTaker;
     Memento* savedState1 = infantry.militusMemento();
-    caretaker.addMemento(savedState1);
+    careTaker.addMemento(savedState1);
 
 // Restore and display
-    infantry.vivificaMemento(caretaker.getMemento(0));
+    infantry.vivificaMemento(careTaker.getMemento(0));
         cout << MAGENTA << "- Memento Pattern Test:\n\n" << RESET;
     cout << CYAN << " • Restored to Initial State:\n";
     cout << "   - Health    : " << infantry.getHealthPerSoldier() << "\n";
@@ -553,8 +673,8 @@ void testMementoPattern() {
     // Modify the state
     infantry.setAttributes(120, 55, 25, 10, "Infantry Unit 23.2");
     Memento* savedState2 = infantry.militusMemento();
-    caretaker.addMemento(savedState2);
-    infantry.vivificaMemento(caretaker.getMemento(1));
+    careTaker.addMemento(savedState2);
+    infantry.vivificaMemento(careTaker.getMemento(1));
     cout << YELLOW << " • Restored to Modified State:\n";
     cout << "   - Health    : " << infantry.getHealthPerSoldier() << "\n";
     cout << "   - Damage    : " << infantry.getDamagePerSoldier() << "\n";
@@ -565,8 +685,8 @@ void testMementoPattern() {
     // Further modify the state
     infantry.setAttributes(90, 40, 20, 5, "Infantry Unit 23.3");
     Memento* savedState3 = infantry.militusMemento();
-    caretaker.addMemento(savedState3);
-    infantry.vivificaMemento(caretaker.getMemento(2));
+    careTaker.addMemento(savedState3);
+    infantry.vivificaMemento(careTaker.getMemento(2));
     cout << RED << " • Restored to Further Modified State:\n";
     cout << "   - Health    : " << infantry.getHealthPerSoldier() << "\n";
     cout << "   - Damage    : " << infantry.getDamagePerSoldier() << "\n";
