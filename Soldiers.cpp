@@ -31,14 +31,14 @@ void Soldiers::vivificaMemento(Memento* mem) {
 
 
 
-void Soldiers::setAttributes(int h, int dam, int def, int amt, string n)
-{
-    this->healthPerSoldier = h;
-    this->damagePerSoldier = dam;
-    this->defencePerSoldier = def;
-    this->amountOfSoldiersPerUnit = amt;
-    this->unitName = n;
-}
+// void Soldiers::setAttributes(int h, int dam, int def, int amt, string n)
+// {
+//     this->healthPerSoldier = h;
+//     this->damagePerSoldier = dam;
+//     this->defencePerSoldier = def;
+//     this->amountOfSoldiersPerUnit = amt;
+//     this->unitName = n;
+// }
 
 
 

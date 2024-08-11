@@ -86,7 +86,6 @@ void Infantry::setUnitName(const std::string &name) {
 
 
 // Function for 4.2. Prototype (clone - making a copy of itself)
-// Implementation made virtual (different from the UML)
 Soldiers* Infantry::clonis() {
     // DEEP COPY
     return new Infantry(*this);
@@ -152,4 +151,14 @@ void Infantry::engage() {
 void Infantry::disengage() {
     retreat();
     rest();
+}
+
+
+
+void Infantry::setAttributes(int h, int dam, int def, int amt, string n) {
+    healthPerSoldier = h;
+    damagePerSoldier = dam;
+    defencePerSoldier = def;
+    amountOfSoldiersPerUnit = amt;
+    unitName = n;
 }

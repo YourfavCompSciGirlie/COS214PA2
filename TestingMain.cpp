@@ -188,20 +188,6 @@ void testMementoPattern() {
     Memento* savedState1 = infantry.militusMemento();
     caretaker.addMemento(savedState1);
 
-    // Modify the state
-    infantry.setAttributes(120, 55, 25, 10, "Modified Unit");
-
-    // Save the modified state
-    Memento* savedState2 = infantry.militusMemento();
-    caretaker.addMemento(savedState2);
-
-    // Further modify the state
-    infantry.setAttributes(90, 40, 20, 5, "Further Modified Unit");
-
-    // Save the further modified state
-    Memento* savedState3 = infantry.militusMemento();
-    caretaker.addMemento(savedState3);
-
     // Restore to the first saved state
     infantry.vivificaMemento(caretaker.getMemento(0));
 
@@ -212,6 +198,13 @@ void testMementoPattern() {
               << ", Defence: " << infantry.getDefencePerSoldier() 
               << ", Unit Name: " << infantry.getUnitName() << '\n';
 
+    // Modify the state
+    infantry.setAttributes(120, 55, 25, 10, "Infantry Unit 23.2");
+
+    // Save the modified state
+    Memento* savedState2 = infantry.militusMemento();
+    caretaker.addMemento(savedState2);
+
     // Restore to the second saved state
     infantry.vivificaMemento(caretaker.getMemento(1));
 
@@ -220,6 +213,13 @@ void testMementoPattern() {
               << ", Damage: " << infantry.getDamagePerSoldier() 
               << ", Defence: " << infantry.getDefencePerSoldier() 
               << ", Unit Name: " << infantry.getUnitName() << '\n';
+
+    // Further modify the state
+    infantry.setAttributes(90, 40, 20, 5, "Infantry Unit 23.3");
+
+    // Save the further modified state
+    Memento* savedState3 = infantry.militusMemento();
+    caretaker.addMemento(savedState3);
 
     // Restore to the third saved state
     infantry.vivificaMemento(caretaker.getMemento(2));
