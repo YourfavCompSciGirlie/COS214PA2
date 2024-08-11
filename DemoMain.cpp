@@ -46,7 +46,7 @@ const string BG_WHITE = "\033[47m";
 
 int main() {
 
-    cout << BG_BLUE << BOLD << "╔═══════════════════════════════════════════════════════════════════════╗\n";
+    cout << RED << BOLD << "╔═══════════════════════════════════════════════════════════════════════╗\n";
     cout << "║                       Testing Main Starts                             ║\n";
     cout << "╚═══════════════════════════════════════════════════════════════════════╝\n" << RESET << "\n";
 
@@ -108,6 +108,8 @@ void testFactoryMethod1() {
     ShieldBearerFactory shieldBearerFactory;
     BoatmanFactory boatmanFactory;
 
+    cout << endl;
+
     cout << GREEN << "- Testing Calculate Functions from Factory Method:\n\n" << RESET;
 
     // Calculate Total Health per Unit
@@ -136,10 +138,14 @@ void testFactoryMethod2() {
     InfantryFactory infantryFactory;
     ShieldBearerFactory shieldBearerFactory;
     BoatmanFactory boatmanFactory;
+    
+    cout << endl;
 
     Soldiers* infantry = infantryFactory.createUnit();
     Soldiers* shieldBearer = shieldBearerFactory.createUnit();
     Soldiers* boatman = boatmanFactory.createUnit();
+
+    cout << endl;
 
     cout << YELLOW << "- Factory Method Test:\n\n" << RESET;
 
@@ -161,6 +167,8 @@ void testFactoryMethod2() {
     delete infantry;
     delete shieldBearer;
     delete boatman;
+
+    cout << endl;
 }
 
 void testPrototypePattern() {
@@ -173,6 +181,8 @@ void testPrototypePattern() {
     infantry.setUnitName("Infantry Unit 12");
 
     Soldiers* clonedInfantry = infantry.clonis();
+
+    cout << endl;
 
     cout << CYAN << "- Prototype Pattern Test:\n\n" << RESET;
 
@@ -191,14 +201,18 @@ void testTemplateMethod() {
     ShieldBearer shieldBearer;
     Boatman boatman;
 
+    cout << endl;
+
     cout << BLUE << "- Template Method Test:\n\n" << RESET;
 
     cout << YELLOW << " • Infantry:\n" << RESET;
+    cout << endl;
     infantry.engage();
     infantry.disengage();
     cout << "\n";
 
     cout << MAGENTA << " • ShieldBearer:\n" << RESET;
+    cout << endl;
     shieldBearer.engage();
     shieldBearer.disengage();
     cout << "\n";
@@ -211,6 +225,8 @@ void testTemplateMethod() {
 
 void testMementoPattern() {
     Infantry infantry;
+
+    cout << endl;
 
     // Initial state
     infantry.setAttributes(152, 67, 30, 15, "Infantry Unit 23");
