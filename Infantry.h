@@ -47,6 +47,8 @@ class Infantry : public Soldiers {
 
         void engage();
         void disengage();
+
+        void setAttributes(int h, int dam, int def, int amt, string n);
 };
 
 #endif // INFANTRY_H

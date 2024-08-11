@@ -147,3 +147,13 @@ void ShieldBearer::disengage() {
     retreat();
     rest();
 }
+
+
+
+void ShieldBearer::setAttributes(int h, int dam, int def, int amt, string n) {
+    healthPerSoldier = h;
+    damagePerSoldier = dam;
+    defencePerSoldier = def;
+    amountOfSoldiersPerUnit = amt;
+    unitName = n;
+}

@@ -152,3 +152,13 @@ void Infantry::disengage() {
     retreat();
     rest();
 }
+
+
+
+void Infantry::setAttributes(int h, int dam, int def, int amt, string n) {
+    healthPerSoldier = h;
+    damagePerSoldier = dam;
+    defencePerSoldier = def;
+    amountOfSoldiersPerUnit = amt;
+    unitName = n;
+}

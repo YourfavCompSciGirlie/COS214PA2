@@ -60,7 +60,7 @@ class Soldiers{
         Soldiers();
         virtual ~Soldiers();
 
-        void setAttributes(int h, int dam, int def, int amt, string n);
+        virtual void setAttributes(int h, int dam, int def, int amt, string n) = 0;
 };
 
 #endif

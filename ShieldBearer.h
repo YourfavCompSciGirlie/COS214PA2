@@ -47,6 +47,8 @@ class ShieldBearer : public Soldiers {
 
         void engage();
         void disengage();
+
+        void setAttributes(int h, int dam, int def, int amt, string n);
 };
 
 #endif // SHIELDBEARER_H
