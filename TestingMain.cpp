@@ -20,6 +20,7 @@ void testFactoryMethod();
 void testPrototypePattern();
 void testTemplateMethod();
 void testMementoPattern();
+void testMementoPattern2();
 void testCalculateFunctions();
 
 
@@ -48,7 +49,11 @@ int main() {
     cout << "------------------------- Testing Memento ---------------------------------\n\n";
     testMementoPattern();
     cout << endl;
-    
+
+    cout << "------------------------- Testing Memento 2 ---------------------------------\n\n";
+    testMementoPattern2();
+    cout << endl;
+
     return 0;
 }
 
@@ -233,5 +238,33 @@ void testMementoPattern() {
     cout << endl;
 }
 
+
+void testMementoPattern2() {
+    Boatman boatman;
+    boatman.setHealthPerSoldier(100);
+    boatman.setDamagePerSoldier(50);
+    boatman.setDefencePerSoldier(30);
+    boatman.setAmountOfSoldiersPerUnit(10);
+    boatman.setUnitName("Infantry Unit");
+
+    CareTaker caretaker;
+
+    caretaker.addMemento(boatman.militusMemento());
+
+    boatman.setHealthPerSoldier(90);
+    boatman.setDamagePerSoldier(40);
+    boatman.setDefencePerSoldier(20);
+
+    std::cout << "Memento Pattern Test:\n";
+    std::cout << "Current Infantry - Health: " << boatman.getHealthPerSoldier() 
+              << ", Damage: " << boatman.getDamagePerSoldier() 
+              << ", Defence: " << boatman.getDefencePerSoldier() << '\n';
+
+    boatman.vivificaMemento(caretaker.getMemento(0));
+
+    std::cout << "Restored Infantry - Health: " << boatman.getHealthPerSoldier() 
+              << ", Damage: " << boatman.getDamagePerSoldier() 
+              << ", Defence: " << boatman.getDefencePerSoldier() << '\n';
+}
 
 

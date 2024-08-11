@@ -165,7 +165,7 @@ void showProgressBar(int duration) {
         int pos = barWidth * i / duration;
         for (int j = 0; j < barWidth; ++j) {
             if (j < pos)
-                std::cout << "#";
+                std::cout << "\u25CF";
             else
                 std::cout << ".";
         }
@@ -293,6 +293,7 @@ void testTemplateMethod() {
     cout << "\n";
 
     cout << CYAN << " • Boatman:\n" << RESET;
+    cout << endl;
     boatman.engage();
     boatman.disengage();
     cout << "\n";
