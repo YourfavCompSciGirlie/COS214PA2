@@ -66,7 +66,7 @@ void testCalculateFunctions() {
     cout << "Infantry Total Health: " << infantryFactory.calculateTotalHealthPerUnit() << "\n\n";
     cout << "ShieldBearer Total Health: " << shieldBearerFactory.calculateTotalHealthPerUnit() << "\n\n";
     cout << "Boatman Total Health: " << boatmanFactory.calculateTotalHealthPerUnit() << '\n';
-
+ 
     cout << endl;
 
     // Test calculateTotalDamagePerUnit
